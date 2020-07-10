@@ -1,0 +1,54 @@
+@url = http://localhost:3005
+@url2 = http://localhost:3010
+
+@token = test
+
+GET {{url}}/readme.txt HTTP/1.1
+
+###
+
+GET {{url2}}/api/genres HTTP/1.1
+
+###
+
+GET {{url2}}/api/genres/2 HTTP/1.1
+
+###
+POST {{url2}}/api/genres
+Content-Type: application/json
+
+{
+    "name" : "Romance"
+}
+
+###
+PUT {{url2}}/api/genres/2
+Content-Type: application/json
+
+{
+    "name" : "Action 18+"
+}
+
+###
+DELETE {{url2}}/api/genres/2
+
+###
+
+GET {{url}}/api/courses HTTP/1.1
+
+###
+
+GET {{url}}/api/courses/2
+
+###
+
+GET https://jsonplaceholder.typicode.com/posts/1
+
+###
+POST https://jsonplaceholder.typicode.com/posts
+Content-Type: application/json
+
+{
+    "title" : "post1",
+    "body" : "Body of post 1"
+}
